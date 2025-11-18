@@ -1,0 +1,330 @@
+{
+  "navigation": {
+    "header": {
+      "logo": {
+        "text": "Quant",
+        "action": "navigate_home"
+      },
+      "mainMenu": [
+        {
+          "label": "Home",
+          "type": "link",
+          "action": "navigate_home",
+          "order": 1
+        },
+        {
+          "label": "Features",
+          "type": "link",
+          "action": "navigate_features",
+          "order": 2
+        },
+        {
+          "label": "Pricing",
+          "type": "link",
+          "action": "navigate_pricing",
+          "order": 3
+        },
+        {
+          "label": "Resources",
+          "type": "dropdown",
+          "order": 4,
+          "items": [
+            {
+              "label": "Blog",
+              "description": "Latest updates and insights",
+              "href": "#blog"
+            },
+            {
+              "label": "FAQs",
+              "description": "Common questions answered",
+              "href": "#faqs"
+            },
+            {
+              "label": "Support / Help Center",
+              "description": "Get help when you need it",
+              "href": "#support"
+            },
+            {
+              "label": "API Docs",
+              "description": "Developer documentation",
+              "href": "#api-docs"
+            },
+            {
+              "label": "Release Notes",
+              "description": "What's new in Quant",
+              "href": "#release-notes"
+            },
+            {
+              "label": "Roadmap",
+              "description": "Our product vision",
+              "href": "#roadmap"
+            }
+          ]
+        },
+        {
+          "label": "About",
+          "type": "link",
+          "action": "navigate_about",
+          "order": 5
+        },
+        {
+          "label": "Contact",
+          "type": "link",
+          "action": "navigate_contact",
+          "order": 6
+        },
+        {
+          "label": "Login",
+          "type": "link",
+          "href": "#login",
+          "order": 7,
+          "style": "default"
+        }
+      ],
+      "cta": {
+        "label": "Sign Up",
+        "type": "button",
+        "style": "gradient",
+        "order": 8,
+        "colors": {
+          "gradient": "from-[#00FF88] to-[#00C8FF]",
+          "text": "black"
+        }
+      }
+    },
+    "footer": {
+      "columns": [
+        {
+          "title": "Product",
+          "links": [
+            {
+              "label": "Features",
+              "action": "navigate_features"
+            },
+            {
+              "label": "Pricing",
+              "action": "navigate_pricing"
+            },
+            {
+              "label": "Roadmap",
+              "href": "#roadmap"
+            },
+            {
+              "label": "Release Notes",
+              "href": "#release-notes"
+            }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            {
+              "label": "About Us",
+              "action": "navigate_about"
+            },
+            {
+              "label": "Careers",
+              "href": "#careers"
+            },
+            {
+              "label": "Contact Us",
+              "action": "navigate_contact"
+            },
+            {
+              "label": "Blog",
+              "href": "#blog"
+            }
+          ]
+        },
+        {
+          "title": "Support",
+          "links": [
+            {
+              "label": "FAQs",
+              "href": "#faqs"
+            },
+            {
+              "label": "Support / Help Center",
+              "href": "#support"
+            },
+            {
+              "label": "API Documentation",
+              "href": "#api-docs"
+            }
+          ]
+        },
+        {
+          "title": "Legal",
+          "links": [
+            {
+              "label": "Terms & Conditions",
+              "href": "#terms"
+            },
+            {
+              "label": "Privacy Policy",
+              "href": "#privacy"
+            },
+            {
+              "label": "Refund Policy",
+              "href": "#refund"
+            },
+            {
+              "label": "Security",
+              "href": "#security"
+            },
+            {
+              "label": "Legal & Compliance",
+              "href": "#compliance"
+            }
+          ]
+        }
+      ],
+      "branding": {
+        "logo": "Quant",
+        "tagline": "Build, backtest & deploy AI-powered trading strategies with institutional-grade tools."
+      },
+      "social": [
+        {
+          "platform": "Twitter",
+          "href": "#twitter",
+          "icon": "Twitter"
+        },
+        {
+          "platform": "LinkedIn",
+          "href": "#linkedin",
+          "icon": "Linkedin"
+        },
+        {
+          "platform": "GitHub",
+          "href": "#github",
+          "icon": "Github"
+        },
+        {
+          "platform": "YouTube",
+          "href": "#youtube",
+          "icon": "Youtube"
+        }
+      ],
+      "bottomBar": {
+        "copyright": "© 2025 Quant. All rights reserved.",
+        "additionalLinks": [
+          {
+            "label": "Sitemap",
+            "href": "#sitemap"
+          },
+          {
+            "label": "Status",
+            "href": "#status"
+          }
+        ],
+        "languageSelector": {
+          "enabled": true,
+          "options": ["English", "Español", "Français", "Deutsch"]
+        }
+      }
+    }
+  },
+  "designSystem": {
+    "header": {
+      "typography": {
+        "menuItems": "text-sm (14px)",
+        "logo": "text-xl (20px)"
+      },
+      "spacing": {
+        "height": "h-20 (80px)",
+        "horizontalGap": "gap-8 (32px)",
+        "padding": "px-6 lg:px-8"
+      },
+      "states": {
+        "default": "text-gray-300",
+        "hover": "text-[#00FF88]",
+        "active": "text-[#00FF88] with bottom border"
+      },
+      "dropdown": {
+        "width": "w-72 (288px)",
+        "background": "bg-black/95 backdrop-blur-xl",
+        "border": "border-white/10",
+        "itemPadding": "px-6 py-3",
+        "hoverState": "bg-[#00FF88]/10"
+      },
+      "cta": {
+        "background": "gradient from-[#00FF88] to-[#00C8FF]",
+        "textColor": "black",
+        "hoverEffect": "opacity-90 + scale-105",
+        "shadow": "shadow-lg shadow-[#00FF88]/20"
+      }
+    },
+    "footer": {
+      "typography": {
+        "columnTitle": "text-sm uppercase tracking-wider",
+        "links": "text-sm (14px)",
+        "copyright": "text-sm text-gray-500"
+      },
+      "layout": {
+        "grid": "grid-cols-2 md:grid-cols-5",
+        "columnGap": "gap-8 lg:gap-12",
+        "padding": "py-16 px-6 lg:px-8"
+      },
+      "states": {
+        "linkDefault": "text-gray-400",
+        "linkHover": "text-[#00FF88]",
+        "transition": "duration-200"
+      },
+      "social": {
+        "size": "w-10 h-10",
+        "background": "bg-white/5",
+        "hoverBackground": "gradient from-[#00FF88]/20 to-[#00C8FF]/20",
+        "border": "border-white/10 hover:border-[#00FF88]/50"
+      }
+    }
+  },
+  "uxGuidelines": {
+    "header": {
+      "principles": [
+        "Keep primary navigation items to 7 or fewer for optimal cognition",
+        "Group related items under 'Resources' dropdown to reduce visual clutter",
+        "Use hover intent for dropdown (desktop) with 200ms delay",
+        "Implement sticky header with blur effect on scroll for context retention",
+        "Highlight 'Sign Up' CTA with gradient to drive conversion",
+        "Ensure 44px minimum touch target for mobile menu items"
+      ],
+      "accessibility": [
+        "Keyboard navigable dropdown with arrow keys and ESC to close",
+        "ARIA labels for icon-only elements",
+        "Focus visible states with outline-[#00FF88]",
+        "Color contrast ratio minimum 4.5:1"
+      ]
+    },
+    "footer": {
+      "principles": [
+        "4-column layout provides clear information hierarchy",
+        "Group by user intent: Product (features), Company (trust), Support (help), Legal (compliance)",
+        "Place social icons in brand column for visual cohesion",
+        "Bottom bar includes copyright, utility links, and language selector",
+        "Use subtle hover states to maintain sophisticated aesthetic",
+        "Include language selector for international expansion"
+      ],
+      "bestPractices": [
+        "Most clicked footer links: Pricing, Contact, Privacy Policy",
+        "Place 'Contact Us' in Company section for discoverability",
+        "Include 'Security' and 'Compliance' for B2B trust signals",
+        "Link to Status page for transparency",
+        "Maintain consistent link styling throughout footer"
+      ]
+    },
+    "responsive": {
+      "mobile": [
+        "Collapse navigation to hamburger menu below 1024px",
+        "Stack footer columns vertically on mobile (2 cols on tablet)",
+        "Full-width CTA buttons in mobile menu",
+        "Accordion-style Resources submenu with slide animation",
+        "24px minimum margin on mobile for safe areas"
+      ],
+      "tablet": [
+        "Show condensed navigation at 768px-1024px",
+        "2x2 footer grid for optimal tablet layout",
+        "Maintain dropdown functionality on tablet landscape"
+      ]
+    }
+  }
+}
