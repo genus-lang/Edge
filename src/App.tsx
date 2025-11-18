@@ -21,9 +21,15 @@ import { Roadmap } from "./pages/Roadmap";
 import { Login } from "./pages/Login";
 import { Signup } from "./pages/Signup";
 import { ForgotPassword } from "./pages/ForgotPassword";
+import { ResetPassword } from "./pages/ResetPassword";
+import { OTPVerification } from "./pages/OTPVerification";
+import { EmailVerification } from "./pages/EmailVerification";
+import { Onboarding } from "./pages/Onboarding";
 import { SearchResultsPage } from "./pages/SearchResultsPage";
+import { AuthCallback } from "./pages/AuthCallback";
+import { SupabaseSetupWarning } from "./components/SupabaseSetupWarning";
 
-type PageType = "home" | "about" | "contact" | "features" | "pricing" | "faqs" | "blog" | "testimonials" | "careers" | "terms" | "privacy" | "refund" | "support" | "compliance" | "security" | "api-docs" | "release-notes" | "roadmap" | "login" | "signup" | "forgot-password" | "search-results";
+type PageType = "home" | "about" | "contact" | "features" | "pricing" | "faqs" | "blog" | "testimonials" | "careers" | "terms" | "privacy" | "refund" | "support" | "compliance" | "security" | "api-docs" | "release-notes" | "roadmap" | "login" | "signup" | "forgot-password" | "reset-password" | "otp-verification" | "email-verification" | "onboarding" | "search-results" | "auth-callback";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageType>("home");
@@ -69,7 +75,15 @@ export default function App() {
       {currentPage === "login" && <Login />}
       {currentPage === "signup" && <Signup />}
       {currentPage === "forgot-password" && <ForgotPassword />}
+      {currentPage === "reset-password" && <ResetPassword />}
+      {currentPage === "otp-verification" && <OTPVerification />}
+      {currentPage === "email-verification" && <EmailVerification />}
+      {currentPage === "onboarding" && <Onboarding />}
+      {currentPage === "auth-callback" && <AuthCallback />}
       {currentPage === "search-results" && <SearchResultsPage />}
+      
+      {/* Supabase Setup Warning - shows when not configured */}
+      <SupabaseSetupWarning />
     </>
   );
 }
