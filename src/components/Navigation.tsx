@@ -1,14 +1,20 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { Button } from "./ui/button";
 import { SITE_CONFIG } from "../config/site";
+import { SearchModal } from "./search/SearchModal";
+import { useSearchShortcut } from "../hooks/useSearch";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Enable keyboard shortcut for search (Cmd/Ctrl + K or /)
+  useSearchShortcut(() => setIsSearchOpen(true));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -177,6 +183,17 @@ export function Navigation() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00FF88] group-hover:w-full transition-all duration-300" />
             </button>
 
+            {/* Search Button */}
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className="text-sm text-gray-300 hover:text-[#00FF88] transition-colors relative group flex items-center gap-2"
+              title="Search (Cmd/Ctrl + K)"
+            >
+              <Search size={18} />
+              <span className="hidden xl:inline">Search</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00FF88] group-hover:w-full transition-all duration-300" />
+            </button>
+
             <button
               onClick={() => handleNavigation("login")}
               className="text-sm text-gray-300 hover:text-[#00FF88] transition-colors relative group"
@@ -285,6 +302,15 @@ export function Navigation() {
                 Contact
               </button>
 
+              {/* Search Button */}
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="text-sm text-gray-300 hover:text-[#00FF88] transition-colors text-left flex items-center gap-2"
+              >
+                <Search size={18} />
+                Search
+              </button>
+
               <button
                 onClick={() => handleNavigation("login")}
                 className="text-sm text-gray-300 hover:text-[#00FF88] transition-colors"
@@ -302,6 +328,9 @@ export function Navigation() {
           </div>
         )}
       </div>
+
+      {/* Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </nav>
   );
 }

@@ -21,8 +21,9 @@ import { Roadmap } from "./pages/Roadmap";
 import { Login } from "./pages/Login";
 import { Signup } from "./pages/Signup";
 import { ForgotPassword } from "./pages/ForgotPassword";
+import { SearchResultsPage } from "./pages/SearchResultsPage";
 
-type PageType = "home" | "about" | "contact" | "features" | "pricing" | "faqs" | "blog" | "testimonials" | "careers" | "terms" | "privacy" | "refund" | "support" | "compliance" | "security" | "api-docs" | "release-notes" | "roadmap" | "login" | "signup" | "forgot-password";
+type PageType = "home" | "about" | "contact" | "features" | "pricing" | "faqs" | "blog" | "testimonials" | "careers" | "terms" | "privacy" | "refund" | "support" | "compliance" | "security" | "api-docs" | "release-notes" | "roadmap" | "login" | "signup" | "forgot-password" | "search-results";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageType>("home");
@@ -68,6 +69,7 @@ export default function App() {
       {currentPage === "login" && <Login />}
       {currentPage === "signup" && <Signup />}
       {currentPage === "forgot-password" && <ForgotPassword />}
+      {currentPage === "search-results" && <SearchResultsPage />}
     </>
   );
 }
