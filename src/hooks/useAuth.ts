@@ -117,7 +117,7 @@ export function useRequireAuth(redirectTo: string = 'login') {
  * Hook to redirect if already authenticated
  * Use on login/signup pages
  */
-export function useRedirectIfAuthenticated(redirectTo: string = 'home') {
+export function useRedirectIfAuthenticated(redirectTo: string = 'dashboard') {
   const auth = useAuth();
 
   useEffect(() => {

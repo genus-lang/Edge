@@ -62,7 +62,7 @@ export function Onboarding() {
       setCurrentStep(currentStep + 1);
     } else {
       // Last step - go to dashboard
-      handleNavigation("home");
+      handleNavigation("dashboard");
     }
   };
 
@@ -74,7 +74,7 @@ export function Onboarding() {
   };
 
   const skipOnboarding = () => {
-    handleNavigation("home");
+    handleNavigation("dashboard");
   };
 
   const step = onboardingSteps[currentStep];

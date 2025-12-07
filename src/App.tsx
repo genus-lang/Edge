@@ -27,9 +27,10 @@ import { EmailVerification } from "./pages/EmailVerification";
 import { Onboarding } from "./pages/Onboarding";
 import { SearchResultsPage } from "./pages/SearchResultsPage";
 import { AuthCallback } from "./pages/AuthCallback";
+import { Dashboard } from "./pages/Dashboard";
 import { SupabaseSetupWarning } from "./components/SupabaseSetupWarning";
 
-type PageType = "home" | "about" | "contact" | "features" | "pricing" | "faqs" | "blog" | "testimonials" | "careers" | "terms" | "privacy" | "refund" | "support" | "compliance" | "security" | "api-docs" | "release-notes" | "roadmap" | "login" | "signup" | "forgot-password" | "reset-password" | "otp-verification" | "email-verification" | "onboarding" | "search-results" | "auth-callback";
+type PageType = "home" | "about" | "contact" | "features" | "pricing" | "faqs" | "blog" | "testimonials" | "careers" | "terms" | "privacy" | "refund" | "support" | "compliance" | "security" | "api-docs" | "release-notes" | "roadmap" | "login" | "signup" | "forgot-password" | "reset-password" | "otp-verification" | "email-verification" | "onboarding" | "search-results" | "auth-callback" | "dashboard";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageType>("home");
@@ -81,6 +82,7 @@ export default function App() {
       {currentPage === "onboarding" && <Onboarding />}
       {currentPage === "auth-callback" && <AuthCallback />}
       {currentPage === "search-results" && <SearchResultsPage />}
+      {currentPage === "dashboard" && <Dashboard />}
       
       {/* Supabase Setup Warning - shows when not configured */}
       <SupabaseSetupWarning />
